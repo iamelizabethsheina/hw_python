@@ -1,0 +1,1 @@
+print('uygftgt7y')
