@@ -1,17 +1,22 @@
-prev = int(input())
-max_len = 1
-current_len = 1
+#создаем переменные, которые далее будут прибавляться с помощью цикла
+sum = 0
+#число переменнных введенных нами
+count = 0
 
 while True:
-    n = int(input())
-    if n == 0:
+    num = int(input())
+    #если num равно 0, то мы выходим из цикла
+    if num == 0:
         break
-    if n > prev:
-        current_len += 1
-    else:
-        max_len = max(max_len, current_len)
-        current_len = 1
-    prev = n
+    sum += num
+    count += 1
+# введенные числа делим на их количество
+if count > 0:
+    average = sum / count
+    print(average)
+else:
+#если же последовательность была пуста, то мы выводим соответствующее сообщение.
+    print("Последовательность пуста")
 
-max_len = max(max_len, current_len)
-print(max_len)
+
+
